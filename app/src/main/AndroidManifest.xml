@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tencent.yolov11ncnn"
+    android:versionCode="1"
+    android:versionName="1.2">
+
+    <!-- ==================== 权限声明 ==================== -->
+    
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    
+    <!-- 录音权限（用于语音指令） -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <!-- 网络权限（用于第三方语音 SDK 初始化与网络状态判断） -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <!-- 振动权限（用于紧急警报触觉反馈） -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- 前台服务权限（保持后台运行） -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    
+    <!-- 保持唤醒（防止屏幕关闭时停止检测） -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- 高精度传感器权限（Android 12+） -->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+
+    <!-- ==================== 硬件特性声明 ==================== -->
+    
+    <!-- 相机硬件（非必需，允许在无相机设备上安装） -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera2.full" android:required="false" />
+    
+    <!-- 传感器硬件声明（IMU姿态检测必需） -->
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="false" />
+    
+    <!-- 旋转矢量传感器（融合传感器，更精确） -->
+    <uses-feature android:name="android.hardware.sensor.rotation_vector" android:required="false" />
+
+    <!-- ==================== 服务查询声明 ==================== -->
+    
+    <!-- Android 11+ 包可见性限制：声明服务查询权限 -->
+    <queries>
+        <!-- TTS 语音播报服务 -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        
+        <!-- 语音识别服务（关键！修正 Action 名称） -->
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        
+        <!-- 语音识别 Intent（用于查询可用的识别引擎） -->
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH" />
+        </intent>
+        
+        <!-- 直接声明 Google 应用包名（推荐） -->
+        <package android:name="com.google.android.googlequicksearchbox" />
+    </queries>
+
+    <!-- ==================== 应用配置 ==================== -->
+    
+    <application
+        android:label="@string/app_name"
+        android:icon="@mipmap/detect"
+        android:hardwareAccelerated="true"
+        tools:replace="android:theme,android:icon"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <!-- 启动屏：每次启动都显示，自动分流到欢迎页或主界面 -->
+        <activity android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 像素风欢迎页：首次安装时显示 -->
+        <activity android:name=".PixelWelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false" />
+
+        <!-- 功能引导页：首次安装时，欢迎页之后显示 -->
+        <activity android:name=".OnboardingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false" />
+        
+        <!-- 专业版语音引导Activity（已禁用） -->
+        <!--
+        <activity android:name=".VoiceWelcomeActivityPro"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false" />
+        -->
+        
+        <!-- 简单版语音引导Activity（备用） -->
+        <activity android:name=".VoiceWelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false" />
+
+        <!-- 主Activity：锁定竖屏方向，硬件加速 -->
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:hardwareAccelerated="true"
+            android:exported="false" />
+    </application>
+</manifest>
+

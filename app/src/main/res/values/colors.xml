@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================================ -->
+    <!-- 红白机经典配色系统（FC/NES 风格）            -->
+    <!-- ============================================ -->
+
+    <!-- 背景色系（纯白带灰 - 红白机风格） -->
+    <color name="pixel_bg_primary">#FAFAFA</color>          <!-- 主背景（纯白带灰） -->
+    <color name="pixel_bg_secondary">#F5F5F5</color>        <!-- 次背景（浅灰） -->
+    <color name="pixel_bg_card">#E8E8E8</color>             <!-- 卡片背景 -->
+
+    <!-- 主色调 - 经典红（红白机标志性色） -->
+    <color name="pixel_red_primary">#E53935</color>         <!-- 主色（经典红） -->
+    <color name="pixel_red_light">#FF5252</color>           <!-- 亮红（高亮） -->
+    <color name="pixel_red_dark">#C62828</color>            <!-- 暗红（阴影） -->
+    <color name="pixel_red_pale">#FFCDD2</color>            <!-- 浅红（边框高光） -->
+
+    <!-- 辅助色 - 经典蓝（对比色） -->
+    <color name="pixel_blue_primary">#1E88E5</color>        <!-- 主蓝 -->
+    <color name="pixel_blue_light">#42A5F5</color>          <!-- 亮蓝 -->
+    <color name="pixel_blue_dark">#1565C0</color>           <!-- 暗蓝 -->
+
+    <!-- 强调色 - 经典黄/金 -->
+    <color name="pixel_gold_primary">#FFC107</color>        <!-- 金黄 -->
+    <color name="pixel_gold_light">#FFD54F</color>          <!-- 亮黄 -->
+    <color name="pixel_gold_dark">#FF8F00</color>           <!-- 橙黄 -->
+
+    <!-- 文字色 -->
+    <color name="pixel_text_primary">#212121</color>        <!-- 主文字（近黑） -->
+    <color name="pixel_text_secondary">#616161</color>      <!-- 次文字 -->
+    <color name="pixel_text_hint">#9E9E9E</color>           <!-- 提示文字 -->
+    <color name="pixel_button_text">#FFFFFF</color>         <!-- 按钮文字 -->
+
+    <!-- 像素框立体色（3D效果） -->
+    <color name="pixel_highlight">#FFFFFF</color>           <!-- 高光边（上左） -->
+    <color name="pixel_shadow">#9E9E9E</color>              <!-- 阴影边（下右） -->
+    <color name="pixel_shadow_deep">#757575</color>         <!-- 深阴影 -->
+
+    <!-- 功能色 -->
+    <color name="pixel_success">#4CAF50</color>             <!-- 成功（绿） -->
+    <color name="pixel_warning">#FF9800</color>             <!-- 警告（橙） -->
+    <color name="pixel_error">#F44336</color>               <!-- 错误（红） -->
+
+    <!-- 半透明 -->
+    <color name="pixel_overlay_light">#40FFFFFF</color>     <!-- 浅色遮罩 -->
+    <color name="pixel_overlay_dark">#40000000</color>      <!-- 深色遮罩 -->
+
+    <!-- ============================================ -->
+    <!-- 新布局别名（映射到红白机配色）                -->
+    <!-- ============================================ -->
+    <color name="pixel_accent_primary">#E53935</color>      <!-- 主强调色 → 经典红 -->
+    <color name="pixel_accent_neon">#FFC107</color>         <!-- 霓虹强调色 → 金黄 -->
+
+    <!-- ============================================ -->
+    <!-- 兼容旧命名（映射到新配色）                    -->
+    <!-- ============================================ -->
+    <color name="pixel_cyan_primary">#E53935</color>        <!-- 映射到红色 -->
+    <color name="pixel_cyan_light">#FF5252</color>
+    <color name="pixel_cyan_neon">#FFC107</color>            <!-- 映射到金色 -->
+    <color name="pixel_cyan_dark">#C62828</color>
+
+    <color name="pixel_border_outer">#212121</color>        <!-- 边框改为黑色 -->
+    <color name="pixel_border_inner">#9E9E9E</color>
+    <color name="pixel_shadow_color">#757575</color>
+
+    <color name="pixel_button_bg">#E53935</color>           <!-- 按钮背景改为红色 -->
+    <color name="pixel_button_bg_hover">#FF5252</color>
+
+    <color name="pixel_scan_line">#40212121</color>
+    <color name="pixel_blink">#FFC107</color>               <!-- 闪烁点改为金色 -->
+    <color name="pixel_glow">#FFCDD2</color>
+
+    <!-- ============================================ -->
+    <!-- Material Design 3 - Light Theme（更新）     -->
+    <!-- ============================================ -->
+    <color name="md_theme_primary">#E53935</color>
+    <color name="md_theme_on_primary">#FFFFFF</color>
+    <color name="md_theme_primary_container">#FFCDD2</color>
+    <color name="md_theme_on_primary_container">#212121</color>
+
+    <color name="md_theme_secondary">#1E88E5</color>
+    <color name="md_theme_on_secondary">#FFFFFF</color>
+    <color name="md_theme_secondary_container">#BBDEFB</color>
+    <color name="md_theme_on_secondary_container">#212121</color>
+
+    <color name="md_theme_error">#F44336</color>
+    <color name="md_theme_on_error">#FFFFFF</color>
+    <color name="md_theme_error_container">#FFDAD6</color>
+    <color name="md_theme_on_error_container">#410002</color>
+
+    <color name="md_theme_surface">#FAFAFA</color>
+    <color name="md_theme_on_surface">#212121</color>
+    <color name="md_theme_surface_variant">#F5F5F5</color>
+    <color name="md_theme_on_surface_variant">#616161</color>
+
+    <color name="md_theme_outline">#212121</color>
+    <color name="md_theme_outline_variant">#9E9E9E</color>
+
+    <!-- 语音功能色 -->
+    <color name="voice_listening">#FF5252</color>
+    <color name="voice_idle">#616161</color>
+    <color name="voice_error">#F44336</color>
+    <color name="warning">#FF9800</color>
+    <color name="critical">#F44336</color>
+
+    <!-- 半透明背景 -->
+    <color name="overlay_dark">#CC000000</color>
+    <color name="overlay_medium">#99000000</color>
+    <color name="overlay_light">#4D000000</color>
+</resources>

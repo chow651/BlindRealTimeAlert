@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素艺术应用图标 64x64 - 红白机风格 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- 外框（红色） -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M8,8 L56,8 L56,56 L8,56 Z" />
+
+    <!-- 内框（留白） -->
+    <path
+        android:fillColor="#FAFAFA"
+        android:pathData="M12,12 L52,12 L52,52 L12,52 Z" />
+
+    <!-- 相机镜头外圈（蓝色） -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M20,20 L44,20 L44,44 L20,44 Z" />
+
+    <!-- 相机镜头内圈 -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M24,24 L40,24 L40,40 L24,40 Z" />
+
+    <!-- 镜头中心（金色） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M28,28 L36,28 L36,36 L28,36 Z" />
+
+    <!-- 眼睛左上（红色） -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M16,16 L20,16 L20,20 L16,20 Z" />
+
+    <!-- 眼睛右上（红色） -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M44,16 L48,16 L48,20 L44,20 Z" />
+
+    <!-- 装饰像素点左下（金色） -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M16,44 L20,44 L20,48 L16,48 Z" />
+
+    <!-- 装饰像素点右下（金色） -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M44,44 L48,44 L48,48 L44,48 Z" />
+</vector>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素麦克风图标 24x24 - 红白机风格 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 麦克风主体（红色） -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M9,4 L15,4 L15,12 L9,12 Z" />
+
+    <!-- 麦克风底座 -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M11,12 L13,12 L13,16 L11,16 Z" />
+
+    <!-- 底座横线 -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M8,16 L16,16 L16,18 L8,18 Z" />
+
+    <!-- 声波左（金色） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M6,8 L8,8 L8,10 L6,10 Z" />
+
+    <!-- 声波右（金色） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M16,8 L18,8 L18,10 L16,10 Z" />
+</vector>

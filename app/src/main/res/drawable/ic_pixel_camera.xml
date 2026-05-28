@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素相机图标 24x24 - 红白机风格 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 相机外框（红色） -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M4,6 L20,6 L20,18 L4,18 Z" />
+
+    <!-- 镜头（蓝色） -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M8,9 L16,9 L16,15 L8,15 Z" />
+
+    <!-- 镜头中心（金色） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M10,11 L14,11 L14,13 L10,13 Z" />
+
+    <!-- 闪光灯（深红） -->
+    <path
+        android:fillColor="#C62828"
+        android:pathData="M17,7 L19,7 L19,9 L17,9 Z" />
+</vector>

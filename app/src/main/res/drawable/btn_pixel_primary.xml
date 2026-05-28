@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 立体像素框按钮（红白机风格 3D 效果） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态 - 凹下去的效果 -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- 底层深色背景 -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#424242"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <!-- 按钮主体（向右下偏移，模拟按下） -->
+            <item android:left="3dp" android:top="3dp" android:right="1dp" android:bottom="1dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#C62828"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <!-- 上边和左边阴影（深色） -->
+            <item android:left="3dp" android:top="3dp" android:right="1dp" android:bottom="1dp">
+                <shape android:shape="rectangle">
+                    <stroke android:width="2dp" android:color="#757575"/>
+                    <corners android:radius="0dp"/>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 正常状态 - 凸起的效果 -->
+    <item>
+        <layer-list>
+            <!-- 底层深色阴影 -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#424242"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <!-- 按钮主体 -->
+            <item android:left="1dp" android:top="1dp" android:right="3dp" android:bottom="3dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="#E53935"/>
+                    <corners android:radius="0dp"/>
+                </shape>
+            </item>
+            <!-- 上边和左边高光（浅色） -->
+            <item android:left="1dp" android:top="1dp" android:right="3dp" android:bottom="3dp">
+                <shape android:shape="rectangle">
+                    <stroke android:width="2dp" android:color="#FF8A80"/>
+                    <corners android:radius="0dp"/>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

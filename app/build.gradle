@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.tencent.yolov11ncnn"
+    compileSdkVersion 33
+    buildToolsVersion "33.0.0"
+
+    ndkVersion "26.1.10909125"
+
+    defaultConfig {
+        applicationId "com.tencent.yolov11ncnn"
+        archivesBaseName = "yolov11ncnn"
+
+        minSdkVersion 24
+        targetSdkVersion 33
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_STL=c++_shared"
+                cppFlags "-std=c++11 -frtti -fexceptions"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/jni/CMakeLists.txt')
+            version "3.10.2"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // 启用 BuildConfig
+    buildFeatures {
+        buildConfig true
+    }
+
+    // 解决 Kotlin 标准库冲突问题
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            if (details.requested.group == 'org.jetbrains.kotlin') {
+                if (details.requested.name.contains('kotlin-stdlib')) {
+                    details.useVersion '1.8.0'
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.annotation:annotation:1.6.0'
+
+    // 讯飞 SparkChain SDK
+    implementation files('libs/SparkChain.aar')
+    implementation files('libs/Codec.aar')
+
+
+    testImplementation 'junit:junit:4.13.2'
+}

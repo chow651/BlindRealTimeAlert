@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">实时提示助手</string>
+    
+    <string-array name="model_array">
+        <item>n</item>
+        <item>s</item>
+    </string-array>
+    
+    <!-- 语音引导文案 -->
+    <string name="voice_startup">实时提示助手已启用。</string>
+    <string name="voice_permission_request">应用需要相机、麦克风和振动权限才能正常工作。接下来将请求授权，请在系统对话框中选择允许。双击屏幕开始授权。</string>
+    <string name="voice_permission_granted">权限已授予。</string>
+    <string name="voice_permission_denied">部分权限未授予，应用功能可能受限。</string>
+    <string name="voice_ask_tutorial">是否需要功能引导说明？双击屏幕收听教程，向右滑动跳过。</string>
+    <string name="voice_tutorial">功能引导说明。第一，握持方式。竖屏握持手机，保持相机正对前方。第二，自动检测。开始行走时，系统会自动检测并播报障碍物位置。第三，场景查询。静止时，点击屏幕下方区域，可以询问前方环境。第四，语音指令。随时说出：帮助、使用教程、查询场景，即可获取对应功能。引导完成，双击屏幕进入主界面。</string>
+    <string name="voice_skip_tutorial">已跳过教程。随时说出：使用教程，即可重新收听。双击屏幕进入主界面。</string>
+    <string name="voice_enter_main">正在进入主界面。</string>
+    
+    <!-- 手势提示 -->
+    <string name="gesture_hint">双击：继续 | 长按：重复 | 右滑：跳过</string>
+    
+    <!-- 无障碍描述 -->
+    <string name="content_desc_touch_area">引导界面，双击继续，长按重复，向右滑动跳过</string>
+    <string name="content_desc_step_indicator">当前步骤</string>
+    
+    <!-- 语音识别服务检测 -->
+    <string name="voice_service_unavailable_title">语音识别服务不可用</string>
+    <string name="voice_service_unavailable_message">检测到您的设备未安装或未启用语音识别服务。\n\n您可以：\n1. 安装 Google 语音服务（推荐）\n2. 启用系统自带语音服务\n3. 跳过语音功能</string>
+    <string name="voice_service_option_google">安装 Google 服务</string>
+    <string name="voice_service_option_settings">打开系统设置</string>
+    <string name="voice_service_option_third_party">跳过语音配置</string>
+    <string name="voice_service_option_skip">跳过（禁用语音）</string>
+    <string name="voice_listening">正在监听...</string>
+    <string name="voice_ready">准备就绪</string>
+
+    <!-- 欢迎页与引导页 -->
+    <string name="pixel_start_experience">开始体验</string>
+    <string name="pixel_start_desc">开始体验，单击进入引导页</string>
+    <string name="pixel_tap_hint">单击任意位置继续 · 连续三击跳过引导</string>
+    <string name="pixel_voice_playing">正在语音播报...</string>
+    <string name="pixel_welcome_tts">欢迎使用实时提示助手。单击屏幕任意位置进入引导，连续三击可跳过引导并直接进入主界面。</string>
+    <string name="pixel_skip_tts">已跳过引导，正在打开主界面。</string>
+
+    <string name="onboarding_next">下一步</string>
+    <string name="onboarding_start">开始使用</string>
+    <string name="onboarding_next_desc">下一步，单击进入下一条引导</string>
+    <string name="onboarding_tap_hint">单击屏幕任意位置继续</string>
+    <string name="onboarding_complete_tts">引导完成，正在打开主界面。</string>
+
+    <!-- 主页面语音按住监听 -->
+    <string name="voice_hold_hint">按住监听，松开停止</string>
+    <string name="voice_hold_hint_desc">按住监听，松开停止</string>
+    <string name="voice_state_desc">语音状态气泡</string>
+
+    <!-- 权限提示 -->
+    <string name="camera_permission_title">需要相机权限</string>
+    <string name="camera_permission_message">应用需要访问相机以实时检测前方障碍物，为您提供安全的出行辅助。</string>
+    <string name="camera_permission_grant">授予权限</string>
+    <string name="camera_permission_cancel">取消</string>
+    <string name="camera_permission_denied">相机权限被拒绝，无法使用检测功能。</string>
+</resources>

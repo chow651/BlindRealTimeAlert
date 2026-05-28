@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素闪烁动画 - 红白机风格（快速闪烁） -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:repeatCount="infinite"
+    android:repeatMode="restart">
+
+    <alpha
+        android:fromAlpha="0.3"
+        android:toAlpha="1.0"
+        android:duration="150" />
+
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.3"
+        android:duration="150"
+        android:startOffset="150" />
+</set>

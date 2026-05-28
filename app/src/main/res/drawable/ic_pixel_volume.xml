@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素音量图标 24x24 - 红白机风格 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 扬声器（红色） -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M4,9 L8,9 L12,5 L12,19 L8,15 L4,15 Z" />
+
+    <!-- 声波1（金色） -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M14,10 L16,10 L16,14 L14,14 Z" />
+
+    <!-- 声波2 -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M17,8 L19,8 L19,16 L17,16 Z" />
+
+    <!-- 声波3 -->
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M20,6 L22,6 L22,18 L20,18 Z" />
+</vector>

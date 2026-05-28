@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        // --- 1. 阿里云镜像 (放在最前面，速度飞快) ---
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // ------------------------------------------
+
+        // 备用源
+        google()
+        mavenCentral() // 用这个替代 jcenter
+    }
+    dependencies {
+        // 你的项目指定了插件版本是 7.3.0
+        classpath 'com.android.tools.build:gradle:7.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        // --- 1. 阿里云镜像 (放在最前面) ---
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        // ------------------------------------------
+
+        // 备用源
+        google()
+        mavenCentral()
+    }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="true"
+    android:focusable="true">
+    
+    <!-- 全屏触摸区域 -->
+    <View
+        android:id="@+id/touchArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="引导界面，双击继续，长按重复，向右滑动跳过"
+        android:importantForAccessibility="yes" />
+    
+    <!-- 步骤指示器（视觉辅助，大字体） -->
+    <TextView
+        android:id="@+id/tvStepIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="启动"
+        android:textSize="48sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:contentDescription="当前步骤"
+        android:importantForAccessibility="no" />
+    
+    <!-- 当前播报内容（视觉辅助，大字体） -->
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="32dp"
+        android:text="实时提示助手已启用"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:importantForAccessibility="no" />
+    
+    <!-- 手势提示（底部，小字体） -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="24dp"
+        android:text="双击：继续 | 长按：重复 | 右滑：跳过"
+        android:textSize="18sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:importantForAccessibility="no" />
+    
+</RelativeLayout>

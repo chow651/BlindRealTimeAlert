@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 像素边框（黑框，红白机风格） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="3dp"
+        android:color="#212121"/>
+    <corners android:radius="0dp"/>
+    <solid android:color="@android:color/transparent"/>
+</shape>
