@@ -36,6 +36,18 @@ BlindRealTimeAlert 是一个运行在 Android 端的实时环境感知与语音�
 | Voice | 讯飞 SparkChain Android SDK |
 | Build | Gradle, Android Gradle Plugin |
 
+## Upstream
+
+BlindRealTimeAlert is based on [`nihui/ncnn-android-yolo11`](https://github.com/nihui/ncnn-android-yolo11), an Android YOLO11 realtime demo built with ncnn and OpenCV Mobile.
+
+Key upstream dependencies:
+
+| Project | Role |
+| --- | --- |
+| [`nihui/ncnn-android-yolo11`](https://github.com/nihui/ncnn-android-yolo11) | Android YOLO11 ncnn sample project. |
+| [`Tencent/ncnn`](https://github.com/Tencent/ncnn) | Neural network inference framework used by the native detection pipeline. |
+| [`nihui/opencv-mobile`](https://github.com/nihui/opencv-mobile) | Android OpenCV Mobile package used by the native camera and image pipeline. |
+
 ## Quick Start
 
 推荐环境：
